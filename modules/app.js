@@ -1,4 +1,4 @@
-//first single value import aand export 
+//first single value import aand export
 
 //const sum = (a, b) => {
 //  console.log("addotion is ", a + b);
@@ -17,7 +17,7 @@
 //
 //module.exports = {sum,div};
 
-//mordern way export 
+//mordern way export
 const sum = (a, b) => {
   console.log("addotion is ", a + b);
 };
@@ -26,4 +26,4 @@ const div = (a, b) => {
   console.log("division is ", a / b);
 };
 
-
+export default sum;
