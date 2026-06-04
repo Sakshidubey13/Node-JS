@@ -1,5 +1,18 @@
+//first single value import aand export 
+
+//const sum = (a, b) => {
+//  console.log("addotion is ", a + b);
+//};
+//
+//module.exports = sum ;
+
+//multiple  value export and import
 const sum = (a, b) => {
   console.log("addotion is ", a + b);
 };
 
-module.exports = sum ;
+const div =(a,b) =>{
+    console.log("division is ", a/b);
+}
+
+module.exports = {sum,div};
