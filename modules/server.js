@@ -15,6 +15,6 @@
 
 //morder way import
 //type": "module" package.json only this can be change it mandatory
-import addition, { div } from "./app.js";
-addition(1, 2);
-div(2, 2);
+//import addition, { div } from "./app.js";
+//addition(1, 2);
+//div(2, 2);
