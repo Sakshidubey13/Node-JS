@@ -22,7 +22,7 @@ const sum = (a, b) => {
   console.log("addotion is ", a + b);
 };
 
-const div = (a, b) => {
+export const div = (a, b) => {
   console.log("division is ", a / b);
 };
 
