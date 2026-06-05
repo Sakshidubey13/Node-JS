@@ -48,5 +48,12 @@ import fs from "fs";
 //    </html>`,
 //);
 
-
 fs.writeFileSync("bill.pdf","this is bill")
+
+
+//2. path module
+//that perfrom can change only  package.json =>  "type": "commonjs" this apply only
+//const path = require("path");
+//console.log(path.basename(__filename));
+
+
