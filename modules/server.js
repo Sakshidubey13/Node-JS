@@ -20,4 +20,13 @@
 //addition(1, 2);
 //div(2, 2);
 
+//CORE MODULE => FILE SYSTEM LEARN 
+//THREE TYPES OF FILE SYSTEM 
+//fs.writeFileSync => to create a new file if it not exits
+
+
+import fs from "fs";
+
+fs.writeFileSync("hello.txt","Hello World")
+
 
