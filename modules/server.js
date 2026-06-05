@@ -31,4 +31,7 @@ import fs from "fs";
 //fs.writeFileSync("hello.txt","Hello World")
 //file create and hello.txt file create and if under wrriten hello world shows
 
-const data = fs.appendFileSync("hello.txt");
+
+//read file => hello.txt => if read text also can apply (utf-8 ) =>that can read file if text
+const data = fs.readFileSync("hello.txt","utf-8");
+console.log(data);
