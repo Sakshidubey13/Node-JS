@@ -72,3 +72,7 @@ import http from "http";
 //server.listen(3000, () => {
 //  console.log("server started succesfully");
 //});
+
+import chalk from "chalk";
+console.log(chalk.green("Success!!"));
+console.log(chalk.red("Failed!!"));
