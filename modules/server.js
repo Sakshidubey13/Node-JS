@@ -20,17 +20,15 @@
 //addition(1, 2);
 //div(2, 2);
 
-//CORE MODULE => FILE SYSTEM LEARN 
-//THREE TYPES OF FILE SYSTEM 
+//CORE MODULE => FILE SYSTEM LEARN
+//THREE TYPES OF FILE SYSTEM
 //fs.writeFileSync => to create a new file if it not exits
 //fs.readFileSync => to read file which is already exits.
 //fs.appendFileSync => to add content after exiting content in file.
 
-
-
 import fs from "fs";
 
-//fs.writeFileSync("hello.txt","Hello World") 
+//fs.writeFileSync("hello.txt","Hello World")
 //file create and hello.txt file create and if under wrriten hello world shows
 
-
+const data = fs.appendFileSync("hello.txt");
