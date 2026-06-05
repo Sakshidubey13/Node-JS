@@ -35,15 +35,18 @@ import fs from "fs";
 //fs.appendFileSync("hello.txt","new line")
 //const data = fs.readFileSync("hello.txt","utf-8");
 //console.log(data);
+//
+//fs.writeFileSync(
+//  "index.html",
+//  `<html>
+//    <head>
+//    <tittle>Hello Node.js</tittle>
+//    </head>
+//    <body>
+//    <h1>Hello Node JS </h1>
+//    </body>
+//    </html>`,
+//);
 
-fs.writeFileSync(
-  "index.html",
-  `<html>
-    <head>
-    <tittle>Hello Node.js</tittle>
-    </head>
-    <body>
-    <h1>Hello Node JS 
-    </body>
-    </html>`,
-);
+
+fs.writeFileSync("bill.pdf","this is bill")
