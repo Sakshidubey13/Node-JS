@@ -63,12 +63,12 @@ import http from "http";
 //req => hold all data comes from client : client => server
 //res => hold all data which send from the server : server
 // => client
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "content-type": "text/plain" }); //head define
-  res.end("Hello from Node server !!"); //res send
-});
-
-//2. start
-server.listen(3000, () => {
-  console.log("server started succesfully");
-});
+//const server = http.createServer((req, res) => {
+//  res.writeHead(200, { "content-type": "text/plain" }); //head define
+//  res.end("Hello from Node server !!"); //res send
+//});
+//
+////2. start
+//server.listen(3000, () => {
+//  console.log("server started succesfully");
+//});
