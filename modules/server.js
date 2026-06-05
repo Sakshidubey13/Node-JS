@@ -36,4 +36,4 @@ import fs from "fs";
 //const data = fs.readFileSync("hello.txt","utf-8");
 //console.log(data);
 
-fs.writeFileSync("index.html", ``);
+fs.writeFileSync("index.html", `<html></html>`);
