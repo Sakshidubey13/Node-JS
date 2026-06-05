@@ -20,7 +20,6 @@
 //addition(1, 2);
 //div(2, 2);
 
-
 //1. file system module
 //CORE MODULE => FILE SYSTEM LEARN
 //THREE TYPES OF FILE SYSTEM
@@ -52,10 +51,23 @@
 
 //fs.writeFileSync("bill.pdf","this is bill")
 
-
 //2. path module
 //that perfrom can change only  package.json =>  "type": "commonjs" this apply only
-const path = require("path");
-console.log(path.basename(__filename));
+//const path = require("path");
+//console.log(path.basename(__filename));
 
+//3. http (hyper text transfer protocoal) => 1.crete => createServer , 2.start =>listen
+import http from "http";
+//1. Create
+//req => hold all data comes from client : client => server
+//res => hold all data which send from the server : server
+// => client
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "content-type": "text/plain" }); //head define
+  res.end("Hello from Node server !!"); //res send
+});
 
+//2. start
+server.listen(3000, () => {
+  console.log("server started succesfully");
+});
