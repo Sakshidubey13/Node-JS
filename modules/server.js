@@ -79,5 +79,5 @@ import chalk from "chalk";
 console.log(chalk.green("Success!!"));
 // console.log(chalk.red("Failed!!"));
 console.log(chalk.yellow("Hii"));
-console.log(chalk.blue("Node"))
+// console.log(chalk.blue("Node"))
 
