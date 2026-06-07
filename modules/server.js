@@ -58,7 +58,7 @@
 
 //3. http (hyper text transfer protocoal) => 1.crete => createServer , 2.start =>listen
 //also can be change only package.json in ("type": "module")  that is must important can't run the code this change cannot be apply it
-import http from "http";
+//import http from "http";
 //1. Create
 //req => hold all data comes from client : client => server
 //res => hold all data which send from the server : server
