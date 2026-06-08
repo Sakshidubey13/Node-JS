@@ -81,11 +81,4 @@
 //console.log(chalk.blue("Node"))
 
 
-                
-import chalk from "chalk";
-// console.log(chalk.green("Success!!"));
-// console.log(chalk.red("Failed!!"));
-// console.log(chalk.yellow("Hii"));
-// console.log(chalk.blue("Node"))
->>>>>>> ac46348b5c6bb98d9ee8d4f455be2ce681702c78
-
+    
