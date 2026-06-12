@@ -9,7 +9,6 @@
 //app.div(40, 20);
 
 
-
 //2nd method const { sum, div } = require("./app.js");
 //
 //sum(10, 20);
