@@ -15,8 +15,6 @@
 //div(40, 20);
 
 
-
-
 //morder way import
 //type": "module" package.json only this can be change it mandatory
 
