@@ -9,10 +9,14 @@
 //app.div(40, 20);
 
 
+
 //2nd method const { sum, div } = require("./app.js");
 //
 //sum(10, 20);
 //div(40, 20);
+
+
+
 
 //morder way import
 //type": "module" package.json only this can be change it mandatory
