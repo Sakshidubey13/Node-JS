@@ -8,12 +8,10 @@
 //app.sum(10, 20);
 //app.div(40, 20);
 
-
 //2nd method const { sum, div } = require("./app.js");
 //
 //sum(10, 20);
 //div(40, 20);
-
 
 //morder way import
 //type": "module" package.json only this can be change it mandatory
@@ -82,12 +80,20 @@
 //console.log(chalk.yellow("Hii"));
 //console.log(chalk.blue("Node"))
 
-
-
-import http from 'http';
-import fs from 'fs';
-import path from 'path';
-
-const server = http.createServer((req,res)=>{
-
-})
+import http from "http";
+import fs from "fs";
+import path from "path";
+// / and GET  request
+const server = http.createServer((req, res) => {
+  if (req.url == "/" && req.method == "GET") {
+  } else {
+    res.writeHead(404, { "content-type": "application /json" });
+    res.end(
+      JSON.stringify({
+        status: false,
+        status_code: 404,
+        message: "Page not found !",
+      }),
+    );
+  }
+});
