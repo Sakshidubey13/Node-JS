@@ -1,4 +1,4 @@
-//import mongodb server
+//import & connect mongodb server
 import { MongoClient } from "mongodb";
 
 
