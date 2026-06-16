@@ -7,6 +7,6 @@ const dbName = "mydb"; // Database name
 //step 2  Create a Reusable DB Connection Function
 
 export const connectDB = async () => {
-    await client.connect();
-  console.log("MongoDB Connected ..")
+  await client.connect();
+  console.log("MongoDB Connected ..");
 };
