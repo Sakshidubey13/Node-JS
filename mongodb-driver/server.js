@@ -21,8 +21,8 @@ const addStudent = async () => {
     name: "Sakshi dubey",
     course: "C language",
   });
-  console.log("Data inserted successfully ! ",result);
+  console.log("Data inserted successfully ! ", result);
 };
-
+addStudent();
 //step 3 CURD operation perform
 //C-CReate
