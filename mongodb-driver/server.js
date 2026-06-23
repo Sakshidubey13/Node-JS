@@ -17,3 +17,7 @@ const connectDB = async () => {
 const addStudent = async () => {
   const db = await connectDB();
 };
+
+
+//step 3 CURD operation perform
+//C-CReate
