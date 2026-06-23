@@ -2,19 +2,14 @@
 import { MongoClient } from "mongodb";
 
 const url = "mongodb://127.0.0.1:27017"; // MongoDB connection URL
-const db = "studentDB" // Database name
+const db = "studentDB"; // Database name
 const client = new MongoClient(url);
 
 //step 2  Create a Reusable DB Connection Function
 export const connectDB = async () => {
   await client.connect();
-  console.log("MongoDB Connected ..");
-  return client.db(dbName);
+  console.log("MongoDB Connected Successfully");
+  return client.db(db);
 };
-//step 3 CURD operation perform 
+//step 3 CURD operation perform
 //C-CReate
-
-
-
-
-
