@@ -12,8 +12,8 @@ const connectDB = async () => {
   return client.db(db_name); //return a database reference
 };
 
-//step 3 CURD operation perform
-//C-CReate
+// database --> collection --> document --> key-value // this is flow of mongodb
+
 const addStudent = async () => {
   const db = await connectDB();
 };
