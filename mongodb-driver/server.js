@@ -23,6 +23,6 @@ const addStudent = async () => {
   });
   console.log("Data inserted successfully ! ", result);
 };
-addStudent();
+addStudent();//calling function
 //step 3 CURD operation perform
 //C-CReate
