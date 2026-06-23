@@ -16,8 +16,13 @@ const connectDB = async () => {
 
 const addStudent = async () => {
   const db = await connectDB();
+  const result = await db.collection("students").insertOne({
+    id: 1,
+    name: "Sakshi dubey",
+    course: "C language",
+  });
+  console.log("Data inserted successfully ! ",result);
 };
-
 
 //step 3 CURD operation perform
 //C-CReate
