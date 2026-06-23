@@ -9,12 +9,11 @@ const client = new MongoClient(url);
 const connectDB = async () => {
   await client.connect();
   console.log("MongoDB Connected Successfully");
-  return client.db(db_name);//return a database reference
+  return client.db(db_name); //return a database reference
 };
 
 //step 3 CURD operation perform
 //C-CReate
-const addStudent = async() => {
- await connectDB()
+const addStudent = async () => {
+  const db = await connectDB();
 };
-
