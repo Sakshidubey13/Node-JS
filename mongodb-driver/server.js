@@ -12,11 +12,6 @@ export const connectDB = async () => {
   console.log("MongoDB Connected ..");
   return client.db(dbName);
 };
-
-
-
-
-
 //step 3 CURD operation perform 
 //C-CReate
 
