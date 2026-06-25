@@ -4,7 +4,6 @@ const url = "mongodb://127.0.0.1:27017"; //mongodb connection url
 const dbname = "student-db"; //DataBase name
 const client = new MongoClient(url);
 
-
 //step 2 : Create a Reusable DB Connection Function
 const connectDB = async () => {
   await client.connect(); //its connect server with database
