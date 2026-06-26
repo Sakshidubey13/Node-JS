@@ -36,3 +36,4 @@ const getStudent = async () => {
   console.log("Student fetched Successfully !!", result);
 };
 getStudent()
+
