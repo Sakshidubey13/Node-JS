@@ -32,5 +32,7 @@ const addStudent = async () => {
 // get all users
 const getStudent = async () => {
   const db = await connectDB();
-  const result = await db.collection("all-students").find().toArray()
+  const result = await db.collection("all-students").find().toArray();
+  console.log("Student fetched Successfully !!", result);
 };
+getStudent()
