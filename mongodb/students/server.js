@@ -26,4 +26,11 @@ const addStudent = async () => {
   console.log("student added successfully !!", result);
 };
 
-addStudent();//call function
+//addStudent();//call function
+
+//2. Update
+
+const getStudent = async () => {
+  const db = await connectDB();
+  const result = await db.collection("all-students").find().toArray()
+};
