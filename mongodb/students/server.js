@@ -29,7 +29,7 @@ const addStudent = async () => {
 //addStudent();//call function
 
 //2. Update
-
+// get all users
 const getStudent = async () => {
   const db = await connectDB();
   const result = await db.collection("all-students").find().toArray()
