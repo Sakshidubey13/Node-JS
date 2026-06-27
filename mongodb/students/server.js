@@ -14,7 +14,7 @@ const connectDB = async () => {
 // flow of mongodb
 //database --> collection --> document(file) --> key : value
 
-//CRD operation using MongoDB Driver
+//CRUD operation using MongoDB Driver
 //1. Create
 const addStudent = async () => {
   const db = await connectDB();
