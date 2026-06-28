@@ -26,6 +26,7 @@ const addStudent = async () => {
   console.log("student added successfully !!", result);
 };
 
+
 //addStudent();//call function
 
 //2. Update
