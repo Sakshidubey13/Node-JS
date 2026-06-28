@@ -11,6 +11,8 @@ const connectDB = async () => {
   return client.db(dbname); //create database and return db object
 };
 
+
+
 // flow of mongodb
 //database --> collection --> document(file) --> key : value
 
