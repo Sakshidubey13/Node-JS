@@ -42,5 +42,3 @@ const getStudent = async () => {
 getStudent()
 
 
-
-
