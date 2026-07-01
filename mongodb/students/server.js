@@ -39,13 +39,14 @@ const getStudent = async () => {
 //getStudent()
 
 //3. Update
+//data base ke upper hone wala har process asynchronous hu hai
 const updateStudent = async () => {
   const db = await connectDB();
-  db.collection("all-students").updateOne(
+  const result =  await db.collection("all-students").updateOne(
     { _id: "6a3bc3a0fe1096efcb043499" },
     {
       $set:{
-        course:"Agentic ai devloper",..
+        course:"Agentic ai devloper",
       }
     },
   );
