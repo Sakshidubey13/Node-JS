@@ -33,7 +33,7 @@ const addStudent = async () => {
 
 //addStudent();//call function
 
-//2. Update
+//2. Read
 // get all users
 const getStudent = async () => {
   const db = await connectDB();
@@ -41,4 +41,7 @@ const getStudent = async () => {
   console.log("Student fetched Successfully !!", result);
 };
 //getStudent()
+
+
+//3. Update
 
