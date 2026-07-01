@@ -41,4 +41,12 @@ const getStudent = async () => {
 //3. Update
 const updateStudent = async () => {
   const db = await connectDB();
+  db.collection("all-students").updateOne(
+    { _id: "6a3bc3a0fe1096efcb043499" },
+    {
+      $set:{
+        course:"Agentic ai devloper",..
+      }
+    },
+  );
 };
