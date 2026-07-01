@@ -4,15 +4,12 @@ const url = "mongodb://127.0.0.1:27017"; //mongodb connection url
 const dbname = "student-db"; //DataBase name
 const client = new MongoClient(url);
 
-
 //step 2 : Create a Reusable DB Connection Function
 const connectDB = async () => {
   await client.connect(); //its connect server with database
   console.log("Mongodb connected susseccfully !! ");
   return client.db(dbname); //create database and return db object
 };
-
-
 
 // flow of mongodb
 //database --> collection --> document(file) --> key : value
@@ -30,7 +27,6 @@ const addStudent = async () => {
   console.log("student added successfully !!", result);
 };
 
-
 //addStudent();//call function
 
 //2. Read
@@ -42,6 +38,7 @@ const getStudent = async () => {
 };
 //getStudent()
 
-
 //3. Update
-
+const updateStudent = async () => {
+  const db = await connectDB();
+};
