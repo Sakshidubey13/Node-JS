@@ -42,12 +42,14 @@ const getStudent = async () => {
 //data base ke upper hone wala har process asynchronous hu hai
 const updateStudent = async () => {
   const db = await connectDB();
-  const result =  await db.collection("all-students").updateOne(
-    { _id: "6a3bc3a0fe1096efcb043499" },
+  const result = await db.collection("all-students").updateOne(
+    {id: "6a3bc3a0fe1096efcb043499" },
     {
-      $set:{
-        course:"Agentic ai devloper",
-      }
+      $set: {
+        course: "Agentic ai devloper",
+      },
     },
   );
+  console.log("Student update successfully ! ", result);
 };
+updateStudent();
