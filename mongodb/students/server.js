@@ -40,6 +40,8 @@ const getStudent = async () => {
 
 //3. Update
 //data base ke upper hone wala har process asynchronous hu hai
+
+  
 const updateStudent = async () => {
   const db = await connectDB();
   const result = await db.collection("all-students").updateOne(
@@ -53,3 +55,4 @@ const updateStudent = async () => {
   console.log("Student update successfully ! ", result);
 };
 updateStudent();
+//today i will ask sir how thw update work for id 
