@@ -22,9 +22,10 @@ const connectDB = async () => {
 const addStudent = async () => {
   const db = await connectDB();
   const result = await db.collection("all-students").insertOne({
-    name: "Sakshi dubey",
+    name: "yashika",
     course: "Web Development",
     age: 18,
+    //result: 80.92,
   });
   console.log("student added successfully !!", result);
 };
@@ -39,7 +40,5 @@ const getStudent = async () => {
   const result = await db.collection("all-students").find().toArray();
   console.log("Student fetched Successfully !!", result);
 };
-getStudent()
-
-
+//getStudent()
 
