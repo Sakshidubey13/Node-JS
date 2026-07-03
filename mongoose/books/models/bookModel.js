@@ -14,4 +14,4 @@ const bookSchema = new mongoose.Schema(
   },
 );
 
-export default mongoose.module("Book", bookSchema);//return = CURD
+export default mongoose.model("Book", bookSchema);//return = CURD

@@ -1,6 +1,6 @@
-import Book from "../models/bookModule.js";
+import Book from "../models/bookModel.js";
 
-const addBook = async (res, req) => {
+export const addBook = async (res, req) => {
   try {
     await Book.create({
       title: "Power of NNow",
@@ -12,7 +12,7 @@ const addBook = async (res, req) => {
     });
     res.status(201).json({
       status: true,
-      message: "Book inserted successfully !",
+      message: "Book Inserted successfully !",
     });
   } catch (err) {
     res.status(400).json({
