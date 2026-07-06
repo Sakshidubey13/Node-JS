@@ -6,6 +6,7 @@ const url = "mongodb://127.0.0.1:27107/bookstore"; //bookstore will become the  
 const connectDB = async (req, res) => {
   try {
     await mongoose.connect(url);
+    console.log("MongoDB connected successfully !!");
   } catch (err) {
     console.log("Mongodb connection failes ! ", err);
   }
