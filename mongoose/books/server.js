@@ -9,7 +9,6 @@ app.use(express.json()); //midleware -> its validate request before sending to t
 connectDB(); //connect server with database == database start/on
 app.use("/api/book", router);
 
-
 app.listen(5000,()=>{
     console.log("Server started successfully !!")
 })
