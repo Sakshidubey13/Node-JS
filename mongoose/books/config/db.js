@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const url = "mongodb://127.0.0.1:27107/bookstore"; //bookstore will become the  database name
 
 
-const connectDB = async (req, res) => {
+const connectDB = async () => {
   try {
     await mongoose.connect(url);
     console.log("MongoDB connected successfully !!");
