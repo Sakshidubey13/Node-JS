@@ -12,6 +12,8 @@ const connectDB = async () => {
   }
 };
 
+
+
 export default connectDB;
 
 //try...catch..use
