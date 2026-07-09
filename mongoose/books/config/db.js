@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
-const url = "mongodb://127.0.0.1:27107/bookstore"; //bookstore will become the  database name
+//const url = "mongodb://127.0.0.1:27107/bookstor"; //bookstore will become the  database name
 const connectDB = async () => {
   try {
-    await mongoose.connect(url);
+    await mongoose.connect("mongodb://127.0.0.1:27017/bookstore");
     console.log("MongoDB connected successfully !!");
   } catch (err) {
     console.log("Mongodb connection failes ! ", err);
