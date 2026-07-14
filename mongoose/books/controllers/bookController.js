@@ -4,14 +4,7 @@ import Book from "../models/bookModel.js";
 //Add book
 export const addBook = async (req, res) => {
   try {
-    await Book.create({
-      title: "Power of NNow",
-      author: "Eckart Tale",
-      price: 250,
-      descriptioin: null,
-      category: "Salf Help",
-      publishedYear: 2000,
-    });
+    await Book.create(req.body);
     res.status(201).json({
       status: true,
       message: "Book Inserted successfully !",
@@ -45,5 +38,5 @@ export const getBooks = async (req, res) => {
 };
 
 export const testing = async (req, res) => {
-  res.json({ data: req.params.action });
+  res.json({data : req.body});
 };
