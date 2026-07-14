@@ -1,6 +1,8 @@
 import Book from "../models/bookModel.js";
 
-export const addBook = async (res, req) => {
+//CURD
+//Add book 
+export const addBook = async (req, res) => {
   try {
     await Book.create({
       title: "Power of NNow",
@@ -23,4 +25,22 @@ export const addBook = async (res, req) => {
   }
 };
 
+//Getbook
+export const getBooks = async (req, res) => {
+  try {
+    //the response coming from the database is
+    const data = await Book.find();
+    res.status(200).json({
+      status: true,
+      message: "Book Fetched successfully !",
+      data,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: false,
+      message: "Book fetching faield !",
+      err: err.message,
+    });
+  }
+};
 
