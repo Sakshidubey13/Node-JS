@@ -1,7 +1,7 @@
 import Book from "../models/bookModel.js";
 
 //CURD
-//Add book 
+//Add book
 export const addBook = async (req, res) => {
   try {
     await Book.create({
@@ -44,3 +44,6 @@ export const getBooks = async (req, res) => {
   }
 };
 
+export const testing = async (req, res) => {
+  res.json({ data: req.params.action });
+};
