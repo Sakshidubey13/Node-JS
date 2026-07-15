@@ -12,6 +12,7 @@ router.get("/test/:action", testing); //url params -single value get from client
 //req.params.action
 
 //  query
+
 router.get("/test", testing);
 
 export default router;
