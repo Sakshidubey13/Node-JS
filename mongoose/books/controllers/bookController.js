@@ -19,6 +19,7 @@ export const addBook = async (req, res) => {
 };
 
 //Getbook
+
 export const getBooks = async (req, res) => {
   try {
     //the response coming from the database is
@@ -38,19 +39,25 @@ export const getBooks = async (req, res) => {
 };
 
 
-export const testing = async (req, res) => {
-  res.json({data : req.body});
+export const updateBook = async (req, res) => {
+  try {
+    await Book.findByIdAndUpdate(req.body.id, req.body);//id 
+    //the response coming from the database is
+    const data = await Book.find();
+    res.status(200).json({
+      status: true,
+      message: "Book Fetched successfully !",
+      data,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: false,
+      message: "Book fetching faield !",
+      err: err.message,
+    });
+  }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
+export const testing = async (req, res) => {
+  res.json({ data: req.body });
+};
