@@ -38,6 +38,11 @@ export const getBooks = async (req, res) => {
   }
 };
 
+export const testing = async (req, res) => {
+  res.json({ data: req.body });
+};
+
+
 
 export const updateBook = async (req, res) => {
   try {
@@ -58,6 +63,3 @@ export const updateBook = async (req, res) => {
   }
 };
 
-export const testing = async (req, res) => {
-  res.json({ data: req.body });
-};
