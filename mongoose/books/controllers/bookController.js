@@ -41,25 +41,35 @@ export const getBooks = async (req, res) => {
 export const testing = async (req, res) => {
   res.json({ data: req.body });
 };
-
-
+//    //const data = await Book.find();
+    
 
 export const updateBook = async (req, res) => {
   try {
-    await Book.findByIdAndUpdate(req.body.id, req.body);//id 
-    //the response coming from the database is
-    const data = await Book.find();
+   const result =  await Book.findByIdAndUpdate(req.body.id, req.body);//id 
     res.status(200).json({
       status: true,
-      message: "Book Fetched successfully !",
-      data,
+      message: "Book update successfully !",
+      data : result,
     });
   } catch (err) {
     res.status(400).json({
       status: false,
-      message: "Book fetching faield !",
+      message: "Book updation faield !",
       err: err.message,
     });
   }
 };
 
+export const deleteBook = async (req,res) =>{
+  try{
+   const result = await Book.findByIdAndUpdate(req.query.id);
+   
+  }catch(err){
+     res.status(400).json({
+      status: false,
+      message: "Book delet faield !",
+      err: err.message,
+    });
+  }
+}
