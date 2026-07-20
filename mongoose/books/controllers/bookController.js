@@ -64,7 +64,10 @@ export const updateBook = async (req, res) => {
 export const deleteBook = async (req,res) =>{
   try{
    const result = await Book.findByIdAndUpdate(req.query.id);
-   
+   res.json({
+    status:true,
+    message:'book deleted successfully !'
+   })
   }catch(err){
      res.status(400).json({
       status: false,
