@@ -20,9 +20,7 @@ router.get("/test/:action", testing); //url params -single value get from client
 //mostly used in update and delete
 //req.params.action
 
-//  query
-
-
+//  query..
 router.get("/test", testing);
 
 export default router;
