@@ -26,8 +26,3 @@ router.get("/test/:action", testing); //url params -single value get from client
 router.get("/test", testing);
 
 export default router;
-
-
-
-
-
