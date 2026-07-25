@@ -19,7 +19,6 @@ export const addBook = async (req, res) => {
 };
 
 //Getbook
-
 export const getBooks = async (req, res) => {
   try {
     //the response coming from the database is
