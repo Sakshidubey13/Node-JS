@@ -76,13 +76,13 @@ export const getprofile = async (req, res) => {
         const user = await auth.findOne({ email: req.body.email });
         return res.json({
             status: true,
-            message: "user profile fetched successfully !!",
+            message: "User profile fetched successfully !!",
             profile: user
         });
     } catch (err) {
         return res.json({
             status: false,
-            message: "user profile fetching failed !!",
+            message: "User profile fetching failed !!",
             err: err.message
         });
     }
