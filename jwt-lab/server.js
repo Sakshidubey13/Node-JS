@@ -10,6 +10,6 @@ app.use(cookieParser());
 app.use("/auth",Router);
 connectdb();
 
-app.listen(3500,()=>{
-    console.log("server started successfully !!");
+app.listen(5000,()=>{
+    console.log("Server started successfully !!");
 })
