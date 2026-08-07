@@ -1,5 +1,4 @@
 //first single value import aand export
-
 //const sum = (a, b) => {
 //  console.log("addotion is ", a + b);
 //};
