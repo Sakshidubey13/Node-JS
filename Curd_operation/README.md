@@ -1,3 +1,9 @@
+Video --> 
+https://github.com/user-attachments/assets/b850d4e7-e1fb-40d5-9b56-f846f9bd0381
+
+
+
+
 # Node.js MongoDB CRUD Application
 
 A full-featured, responsive CRUD (Create, Read, Update, Delete) web application built with **Node.js**, **Express.js**, **MongoDB (Mongoose)**, and **EJS template engine** following the **MVC Architecture**.
