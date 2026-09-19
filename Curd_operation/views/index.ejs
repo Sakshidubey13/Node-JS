@@ -18,20 +18,19 @@
   <div class="card-body">
     
     <!-- Top Controls: Show Entries & Search -->
-    <form id="filterForm" action="/" method="GET" class="row mb-3 align-items-center">
+    <div class="row mb-3 align-items-center">
       <div class="col-md-6 d-flex align-items-center mb-2 mb-md-0">
         <label class="me-2 text-muted fw-semibold">Show</label>
-        <select name="limit" id="limitSelect" class="form-select form-select-sm w-auto d-inline-block" onchange="changeLimit(this)">
+        <select id="limitSelect" class="form-select form-select-sm w-auto d-inline-block" onchange="changeLimit(this)">
           <option value="5" <%= limit === 5 ? 'selected' : '' %>>5</option>
           <option value="10" <%= limit === 10 ? 'selected' : '' %>>10</option>
           <option value="15" <%= limit === 15 ? 'selected' : '' %>>15</option>
         </select>
         <label class="ms-2 text-muted fw-semibold">entries</label>
-        <input type="hidden" name="search" value="<%= search %>">
       </div>
 
       <div class="col-md-6 d-flex justify-content-md-end align-items-center">
-        <div class="input-group input-group-sm w-auto">
+        <form action="/" method="GET" class="input-group input-group-sm w-auto">
           <span class="input-group-text bg-white"><i class="fa-solid fa-search"></i></span>
           <input type="text" name="search" class="form-control" placeholder="Search by name, email, phone..." value="<%= search %>">
           <input type="hidden" name="limit" value="<%= limit %>">
@@ -39,9 +38,9 @@
           <% if (search) { %>
             <a href="/" class="btn btn-outline-secondary">Reset</a>
           <% } %>
-        </div>
+        </form>
       </div>
-    </form>
+    </div>
 
     <!-- Multiple Delete Button Form -->
     <form id="multiDeleteForm" action="/delete-multiple" method="POST">
@@ -177,9 +176,10 @@
 
   function changeLimit(select) {
     const limit = select.value;
-    const searchInput = document.querySelector('input[name="search"]');
-    const searchValue = searchInput ? searchInput.value : '';
-    window.location.href = `/?limit=${limit}&search=${encodeURIComponent(searchValue)}&page=1`;
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('limit', limit);
+    urlParams.set('page', '1');
+    window.location.search = urlParams.toString();
   }
 </script>
 
