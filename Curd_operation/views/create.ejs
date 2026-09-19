@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h4 class="card-title fw-bold mb-4 text-center">
+          <i class="fa-solid fa-user-plus me-2 text-success"></i> Add New Record
+        </h4>
+
+        <% if (errors && errors.length > 0) { %>
+          <div class="alert alert-danger">
+            <ul class="mb-0">
+              <% errors.forEach(error => { %>
+                <li><%= error.msg %></li>
+              <% }) %>
+            </ul>
+          </div>
+        <% } %>
+
+        <form action="/create" method="POST" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= formData.name || '' %>" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="email" name="email" value="<%= formData.email || '' %>" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label fw-semibold">Phone <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="phone" name="phone" value="<%= formData.phone || '' %>" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="image" class="form-label fw-semibold">Profile Image</label>
+            <input type="file" class="form-control" id="image" name="image" accept="image/*">
+          </div>
+
+          <div class="mb-4 form-check">
+            <input type="checkbox" class="form-check-input" id="status" name="status" value="true" <%= formData.status !== false ? 'checked' : '' %>>
+            <label class="form-check-label fw-semibold" for="status">Active Status</label>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <a href="/" class="btn btn-secondary">
+              <i class="fa-solid fa-arrow-left me-1"></i> Back
+            </a>
+            <button type="submit" class="btn btn-success">
+              <i class="fa-solid fa-check me-1"></i> Save Record
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
